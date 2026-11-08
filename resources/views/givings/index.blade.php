@@ -1,0 +1,4 @@
+@extends('layouts.app')@section('content')<div class="d-flex justify-content-between mb-3"><h2>Giving Transactions</h2>@can('givings.create')
+<a href="{{ route('givings.create') }}" class="btn btn-primary">Record Giving</a>
+@endcan
+</div><div class="table-responsive"><table class="table table-striped"><thead><tr><th>Date</th><th>Receipt</th><th>Member</th><th>Type</th><th>Amount (KES)</th><th>SMS</th></tr></thead><tbody>@foreach($givings as $g)<tr><td>{{ $g->giving_date->format('d M Y') }}</td><td>{{ $g->transaction_reference }}</td><td>{{ $g->member->name }} ({{ $g->member->ekanisa_number }})</td><td>{{ $g->givingType->name }}</td><td>{{ number_format($g->amount,2) }}</td><td>{{ $g->smsLog?->status??'N/A' }}</td></tr>@endforeach</tbody></table></div>{{ $givings->links('pagination::bootstrap-5') }}@endsection

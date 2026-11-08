@@ -1,0 +1,64 @@
+/* Church CMIS adaptations for the MDB free admin template. */
+:root { --church-header-height: 68px; }
+body { font-family: Roboto, system-ui, -apple-system, "Segoe UI", sans-serif; color: #394458; background: #f5f6fa; }
+#main-navbar { min-height: var(--church-header-height); z-index: 1030; }
+#main-navbar .navbar-brand { font-size: 1rem; letter-spacing: .03em; color: #243248; }
+.brand-mark { width: 36px; height: 36px; display: inline-grid; place-items: center; border-radius: 10px; background: #3b71ca; color: white; font-size: 1.4rem; flex-shrink: 0; }
+.brand-subtitle { font-size: .68rem; font-weight: 500; letter-spacing: .08em; }
+.sidebar { padding-top: var(--church-header-height); }
+.sidebar-sticky { height: calc(100vh - var(--church-header-height)); }
+.sidebar .list-group-item { border: 0; border-radius: 6px; margin-bottom: .4rem; display: flex; align-items: center; gap: .9rem; font-size: .92rem; }
+.sidebar .list-group-item:not(.active) { color: #5d6778; }
+.sidebar .list-group-item.active { background: #3b71ca; color: white; }
+.nav-icon { width: 20px; height: 20px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.nav-section { font-size: .65rem; font-weight: 700; letter-spacing: .14em; color: #8791a2; }
+main { margin-top: var(--church-header-height); min-height: calc(100vh - var(--church-header-height)); }
+.page-content { max-width: 1600px; padding: 2rem; }
+main h2 { font-size: 1.6rem; font-weight: 600; color: #26344a; }
+main .card { border: 0; border-radius: .65rem; }
+main form.card { padding: 1.75rem; }
+main .table { background: white; }
+main .table thead th { color: #64748b; font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; font-weight: 600; background: #f9fafc; }
+main .table td, main .table th { vertical-align: middle; }
+main .form-control, main .form-select { min-height: 42px; }
+main .form-label { font-size: .87rem; font-weight: 500; }
+main .btn { text-transform: none; font-size: .86rem; }
+main summary { font-size: .87rem; cursor: pointer; }
+main .progress { background: #edf1f8; }
+.giving-item { border-bottom: 1px solid #edf0f5; padding-bottom: 1rem; }
+.account-name { max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .85rem; }
+.skip-link { position: fixed; top: -100px; left: 1rem; z-index: 2000; background: white; padding: .75rem; }
+.skip-link:focus { top: .5rem; }
+.guest-layout main { padding-left: 0; }
+.guest-layout .page-content { padding-top: 4rem; }
+@media (max-width: 991.98px) {
+    .sidebar { width: 260px; max-width: 88vw; }
+    .page-content { padding: 1.25rem; }
+}
+@media (max-width: 575.98px) {
+    .brand-subtitle { font-size: .57rem; }
+    #main-navbar .navbar-brand { font-size: .85rem; margin-right: .5rem; }
+    main h2 { font-size: 1.35rem; }
+    main form.card { padding: 1rem; }
+    .page-content { padding: 1rem; }
+}
+@media print {
+    #main-navbar, .sidebar { display: none !important; }
+    main { padding: 0; margin: 0; }
+}
+.chart-scroll { overflow-x: auto; }
+.giving-trend-chart { display: block; width: 100%; min-width: 540px; max-height: 350px; }
+.membership-chart-track { height: 16px; border-radius: 3px; background: #edf1f8; overflow: hidden; }
+.membership-chart-bar { height: 100%; min-width: 2px; background: #3b71ca; border-radius: 3px; }
+.membership-chart-bar.group-bar { background: #159e91; }
+/* Select2 member picker, aligned with MDB form controls. */
+.select2-container--default .select2-selection--single { min-height: 42px; border-color: #bdbdbd; border-radius: .25rem; }
+.select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 40px; padding-left: 12px; padding-right: 40px; color: #394458; }
+.select2-container--default .select2-selection--single .select2-selection__arrow { height: 40px; right: 8px; }
+.select2-container--default.select2-container--focus .select2-selection--single,
+.select2-container--default.select2-container--open .select2-selection--single { border-color: #3b71ca; box-shadow: 0 0 0 1px #3b71ca; }
+.select2-container--default .select2-results__option--highlighted[aria-selected] { background-color: #3b71ca; }
+.select2-container .select2-selection--single .select2-selection__clear { margin-right: 8px; }
+.select2-dropdown { border-color: #bdbdbd; }
+.select2-search__field { border-radius: .25rem; }
+main .add-giving-button { width: 42px; height: 42px; padding: 0; display: inline-flex; align-items: center; justify-content: center; font-size: 1.8rem; line-height: 1; }
